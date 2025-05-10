@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
+        var list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
 
         list.stream().sorted().skip(3).limit(4).forEach(System.out::println);
     }
@@ -39,7 +39,7 @@ class Person {
 
 public class Application {
     public static void main(String[] args) {
-        List<Person> people = List.of(
+        var people = List.of(
             new Person("Ali", 16),
             new Person("Ayşe", 22),
             new Person("Veli", 18),
@@ -47,7 +47,7 @@ public class Application {
             new Person("Mehmet", 20)
         );
 
-        List<Person> sortedByAge = people.stream()
+        var sortedByAge = people.stream()
             .sorted(Comparator.comparing(Person::getAge))
             .collect(Collectors.toList());
 
@@ -82,7 +82,7 @@ class Person {
 
 public class Application {
     public static void main(String[] args) {
-        List<Person> people = List.of(
+        var people = List.of(
             new Person("Ali", 16),
             new Person("Ayşe", 22),
             new Person("Veli", 18),
@@ -90,11 +90,7 @@ public class Application {
             new Person("Mehmet", 20)
         );
 
-        List<Person> sortedByName = people.stream()
-            .sorted(Comparator.comparing(Person::getName))
-            .collect(Collectors.toList());
-
-        System.out.println(sortedByName);
+        people.stream().sorted(Comparator.comparing(Person::getName)).forEach(System.out::println);
     }
 }
 ```
@@ -125,7 +121,7 @@ class Person {
 
 public class Application {
     public static void main(String[] args) {
-        List<Person> people = List.of(
+        var people = List.of(
             new Person("Ali", 16),
             new Person("Ayşe", 22),
             new Person("Veli", 18),
@@ -133,12 +129,8 @@ public class Application {
             new Person("Mehmet", 20)
         );
 
-        List<Person> sortedComplex = people.stream()
-            .sorted(Comparator.comparing(Person::getAge)
-                    .thenComparing(Person::getName))
-            .collect(Collectors.toList());
-
-        System.out.println(sortedComplex);
+        people.stream().sorted(Comparator.comparing(Person::getAge).thenComparing(Person::getName))
+        .forEach(System.out::println);
     }
 }
 ```
@@ -169,7 +161,7 @@ class Person {
 
 public class Application {
     public static void main(String[] args) {
-        List<Person> people = List.of(
+        var people = List.of(
             new Person("Ali", 16),
             new Person("Ayşe", 22),
             new Person("Veli", 18),
@@ -177,11 +169,7 @@ public class Application {
             new Person("Mehmet", 20)
         );
 
-        List<Person> sortedDesc = people.stream()
-            .sorted(Comparator.comparing(Person::getAge).reversed())
-            .collect(Collectors.toList());
-
-        System.out.println(sortedDesc);
+        people.stream().sorted(Comparator.comparing(Person::getAge).reversed()).forEach(System.out::println);
     }
 }
 ```

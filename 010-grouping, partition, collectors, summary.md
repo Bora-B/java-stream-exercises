@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        List<String> words = List.of("apple", "ant", "banana", "ball", "boat");
+        var words = List.of("apple", "ant", "banana", "ball", "boat");
 
         Map<Character, Long> countByFirstLetter = words.stream()
                 .collect(Collectors.groupingBy(word -> word.charAt(0), Collectors.counting()));
@@ -46,7 +46,7 @@ import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(23, 4, 99, 15, 7, 18, 1, 60, 42);
+        var numbers = List.of(23, 4, 99, 15, 7, 18, 1, 60, 42);
 
         Map<String, Long> grouped = numbers.stream()
                 .collect(Collectors.groupingBy(
@@ -82,7 +82,7 @@ class Product {
 
 public class Application {
     public static void main(String[] args) {
-        List<Product> products = List.of(
+        var products = List.of(
             new Product("Laptop", "Electronics"),
             new Product("TV", "Electronics"),
             new Product("Banana", "Food"),
@@ -124,7 +124,7 @@ class Employee {
 
 public class Application {
     public static void main(String[] args) {
-        List<Employee> employees = List.of(
+        var employees = List.of(
             new Employee("IT", 6000),
             new Employee("HR", 4000),
             new Employee("Finance", 5000),
@@ -166,7 +166,7 @@ class Person {
 
 public class Application {
     public static void main(String[] args) {
-        List<Person> people = List.of(
+        var people = List.of(
             new Person("Ali", 16),
             new Person("Ayşe", 22),
             new Person("Veli", 18),
@@ -206,7 +206,7 @@ class Product {
 
 public class Application {
     public static void main(String[] args) {
-        List<Product> products = List.of(
+        var products = List.of(
             new Product("Laptop", "Electronics"),
             new Product("TV", "Electronics"),
             new Product("Shirt", "Clothing"),
@@ -239,7 +239,7 @@ import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        List<Student> students = List.of(
+        var students = List.of(
             new Student("Ali", List.of("Math", "Physics")),
             new Student("Veli", List.of("Math", "Chemistry")),
             new Student("Ayşe", List.of("Biology", "Physics"))
@@ -289,7 +289,7 @@ class Student {
 
 public class Application {
     public static void main(String[] args) {
-        List<Student> students = List.of(
+        var students = List.of(
             new Student("Ali", List.of("Math", "Physics")),
             new Student("Veli", List.of("Math", "Chemistry")),
             new Student("Ayşe", List.of("Biology", "Physics"))

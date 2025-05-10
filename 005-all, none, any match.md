@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        var nums = List.of(1, 2, 3, 4, 5);
 
         boolean allPositive = nums.stream().allMatch(n -> n > 0);
         System.out.println(allPositive);
@@ -21,7 +21,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        var nums = List.of(1, 2, 3, 4, 5);
 
         boolean allPositive = nums.stream().noneMatch(n -> n <= 0);
         System.out.println(allPositive);
@@ -36,7 +36,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        var nums = List.of(1, 2, 3, 4, 5);
 
         boolean allPositive = !nums.stream().anyMatch(n -> n <= 0);
         System.out.println(allPositive);
@@ -51,7 +51,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<String> words = List.of("spring", "java", "kotlin");
+        var words = List.of("spring", "java", "kotlin");
 
         boolean containsJava = words.stream().anyMatch(s -> s.equals("java"));
 
@@ -67,7 +67,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<String> texts = List.of("hello", "world", "");
+        var texts = List.of("hello", "world", "");
 
         boolean noneEmpty = texts.stream().noneMatch(String::isEmpty);
 
@@ -83,7 +83,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(3, 7, 11, 2);
+        var nums = List.of(3, 7, 11, 2);
 
         boolean hasGreaterThanTen = nums.stream().anyMatch(n -> n > 10);
 
@@ -99,7 +99,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(1, 3, 5, 7);
+        var nums = List.of(1, 3, 5, 7);
 
         boolean noneEven = nums.stream().noneMatch(n -> n % 2 == 0);
 
@@ -115,7 +115,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Person> people = List.of(
+        var people = List.of(
                 new Person("Ahmet", 25),
                 new Person("mehmet", 30)
         );
@@ -145,7 +145,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Product> products = List.of(
+        var products = List.of(
                 new Product("Laptop", 1500),
                 new Product("Mouse", 200)
         );

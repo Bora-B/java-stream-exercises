@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> list = List.of(23, 4, 99, 15, 7, 18, 1, 60, 42);
+        var list = List.of(23, 4, 99, 15, 7, 18, 1, 60, 42);
 
         list.stream().sorted().limit(5).forEach(System.out::println);
     }
@@ -20,7 +20,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(5, 12, 3, 19, 8, 25);
+        var numbers = List.of(5, 12, 3, 19, 8, 25);
 
         numbers.stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
     }
@@ -34,7 +34,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
+        var list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
 
         int max = list.stream()
                 .max(Integer::compareTo)
@@ -52,9 +52,9 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
+        var list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
         
-        List<Integer> sorted = list.stream()
+        var sorted = list.stream()
                 .sorted()
                 .toList();
 
@@ -78,7 +78,7 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
+        var list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 2, 3, 4, 4, -1, -1, -2, -100);
 
         int maxEven = list.stream()
                 .filter(n -> n % 2 == 0)
