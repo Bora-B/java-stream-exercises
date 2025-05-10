@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        List<String> words = List.of("apple", "banana", "cherry", "melon", "watermelon", "peach", "orange", "strawberry");
+        var words = List.of("apple", "banana", "cherry", "melon", "watermelon", "peach", "orange", "strawberry");
 
         Map<Integer, List<String>> groupedByLength = words.stream()
                 .collect(Collectors.groupingBy(String::length));
